@@ -2,40 +2,27 @@ import { useState } from "react";
 
 import ExpenseForm from "./components/ExpenseForm";
 import ExpenseList from "./components/ExpenseList";
-import Dashboard from "./components/Dashboard";
-import Charts from "./components/Charts";
 
-function App(){
+function App() {
 
-const [selectedExpense, setSelectedExpense] = useState(null);
+  const [selectedExpense, setSelectedExpense] = useState(null);
 
+  return (
+    <div>
 
-return(
+      <h1>Expense Tracker</h1>
 
-<div>
+      <ExpenseForm
+        selectedExpense={selectedExpense}
+        setSelectedExpense={setSelectedExpense}
+      />
 
-<h1>MERN Expense Tracker</h1>
+      <ExpenseList
+        setSelectedExpense={setSelectedExpense}
+      />
 
-<Dashboard />
-
-<Charts />
-
-<ExpenseForm 
-    selectedExpense={selectedExpense}
-    setSelectedExpense={setSelectedExpense}
-/>
-
-
-<ExpenseList 
-    setSelectedExpense={setSelectedExpense}
-/>
-
-
-</div>
-
-)
-
+    </div>
+  );
 }
-
 
 export default App;
