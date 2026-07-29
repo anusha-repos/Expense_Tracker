@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import API from "../api/axios";
-import ExpensePieChart from "./ExpensePieChart";
+import ExpensePieChart from "./expensepiechart";
 
 function ExpenseList({ setSelectedExpense }) {
   const [expenses, setExpenses] = useState([]);
